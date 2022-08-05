@@ -33,7 +33,6 @@ class ViewController: UIViewController , UITableViewDataSource {
     
     var textten: String = ""
     
-    //var gopTenDict = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,8 +40,7 @@ class ViewController: UIViewController , UITableViewDataSource {
         
         searchBar.delegate = self
         myTable.dataSource = self
-        
-        
+                
         //xếp tên theo kí tự
         sectionTitle = Array(Set(DSten.compactMap({String($0.prefix(1)) } )))
         sectionTitle.sort()
@@ -51,8 +49,8 @@ class ViewController: UIViewController , UITableViewDataSource {
             tenDict[stitle] = [String]() //["a" : [],....]
         }
         
-        for ten in DSten { //  print(tenDict [String(ten.prefix(1))])
-            tenDict [String(ten.prefix(1))]?.append(ten)  //tên = (value) được thêm vào cùng 1 Key "t"
+        for ten in DSten {   //  print(tenDict [String(ten.prefix(1))])
+            tenDict [String(ten.prefix(1))]?.append(ten)   //tên = (value) được thêm vào cùng 1 Key "t"
         }
         
         //gan dict searchDS =  tenDict
@@ -76,13 +74,20 @@ class ViewController: UIViewController , UITableViewDataSource {
 //        }
 //        return cell!
 //    }
+    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+//            let array = tenDict[sectionTitle[indexPath.section]] ?? []
+//            cell?.textLabel?.text = array[indexPath.row]
+//            return cell!
+//
 
-   
+    //nhóm tên theo a,b,c...hiển thị dl ra tableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        print(indexPath.row)
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         let array = searchDS[sectionTitle[indexPath.section]] ?? []
-        print(indexPath.section)
+        //print(indexPath.section)
         cell?.textLabel?.text = array[indexPath.row]
 //        if array.count > indexPath.row {
 //            cell?.textLabel?.text = array[indexPath.row] ?? array[indexPath.row]
@@ -90,27 +95,18 @@ class ViewController: UIViewController , UITableViewDataSource {
         return cell!
     }
     
-    //nhóm tên theo a,b,c...hiển thị dl ra tableView
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-//            let array = tenDict[sectionTitle[indexPath.section]] ?? []
-//            cell?.textLabel?.text = array[indexPath.row]
-//            return cell!
-//        }
+}
 
 
     //dùng segue truyền data giữa các ViewController
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? MyViewController,
-           let cell = sender as? UITableViewCell,
-           let indexPath = myTable.indexPath(for: cell) {
-            vc.textten = DSten[indexPath.row]
-           }
-    }
-    
-    
-    
-}
+//    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let vc = segue.destination as? MyViewController,
+//           let cell = sender as? UITableViewCell,
+//           let tentext = myTable.indexPath(for: cell) {
+//            vc.textten = [indexPath.row]
+//           }
+//    }
+   
 
 extension ViewController:  UITableViewDelegate {
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -157,23 +153,10 @@ extension ViewController: UISearchBarDelegate {
                     }
                 }
             }
-            //print(searchDS)
         }
 
         myTable.reloadData()
     }
 }
 
-//extension ViewController: UISearchBarDelegate {
-
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        if isSearching {
-//            searchDS = DSten
-//        } else {
-//            searchDS = DSten.filter({ $0.lowercased().prefix(searchText.count) == searchText.lowercased() } )
-//            isSearching = true
-//        }
-//        myTable.reloadData()
-//    }
-//}
 
