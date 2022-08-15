@@ -1,14 +1,18 @@
 //
-//  MH2TableViewCell.swift
+//  MyTableViewCell.swift
 //  Contacts
 //
-//  Created by Vuong The Vu on 02/08/2022.
+//  Created by Vuong The Vu on 04/08/2022.
 //
 
 import UIKit
 
-class MH2TableViewCell: UITableViewCell {
+class MyTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var mytbcell: UILabel!
+    
+    @IBOutlet weak var lblname: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -7,14 +7,16 @@
 
 import UIKit
 
+var glb: String? = nil
 class MH21ChiTietVC: UIViewController {
 
+    
     @IBOutlet weak var lbTennext: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        lbTennext.text = glb
     }
     
 
