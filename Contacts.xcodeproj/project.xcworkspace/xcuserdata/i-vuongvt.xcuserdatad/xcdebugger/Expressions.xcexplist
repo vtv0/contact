@@ -10,5 +10,13 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "MH1DetailVC.prepare(for:sender:):MH1DetailVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "segue.destination as? SuaVC12">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

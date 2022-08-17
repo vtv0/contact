@@ -8,6 +8,7 @@
 import Foundation
 
 class Person {
+    public var ID: String
     public var Images: String
     public var Name: String
     public var PhoneNumber: String
@@ -16,7 +17,8 @@ class Person {
     public var DateOfBirth: String
     
     
-    init( images: String, name: String, phonenumber: String, email: String, company: String, dateofbirth: String) {
+    init( id: String, images: String, name: String, phonenumber: String, email: String, company: String, dateofbirth: String) {
+        self.ID = id
         self.Images = images
         self.Name = name
         self.PhoneNumber = phonenumber

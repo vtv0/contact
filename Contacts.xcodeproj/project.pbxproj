@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75BAC9BC28AB435300E7EA55 /* SuaVC12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BAC9BB28AB435300E7EA55 /* SuaVC12.swift */; };
 		75CB6004289BC91400ECB28A /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB6003289BC91400ECB28A /* MyTableViewCell.swift */; };
 		75CB6006289BDB9700ECB28A /* DongMH1Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB6005289BDB9700ECB28A /* DongMH1Cell.swift */; };
 		75CD0D472897B7BD00246F4B /* MH2MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CD0D462897B7BD00246F4B /* MH2MainVC.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		75BAC9BB28AB435300E7EA55 /* SuaVC12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuaVC12.swift; sourceTree = "<group>"; };
 		75CB6003289BC91400ECB28A /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		75CB6005289BDB9700ECB28A /* DongMH1Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DongMH1Cell.swift; sourceTree = "<group>"; };
 		75CD0D462897B7BD00246F4B /* MH2MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MH2MainVC.swift; sourceTree = "<group>"; };
@@ -94,6 +96,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75BAC9BD28AB43A800E7EA55 /* MH1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MH1;
+			sourceTree = "<group>";
+		};
 		75D6DEB1288659CA008E3970 = {
 			isa = PBXGroup;
 			children = (
@@ -119,10 +128,12 @@
 			children = (
 				75D6DEBD288659CA008E3970 /* AppDelegate.swift */,
 				75D6DEBF288659CA008E3970 /* SceneDelegate.swift */,
+				75BAC9BD28AB43A800E7EA55 /* MH1 */,
 				75D6DEC1288659CA008E3970 /* ViewController.swift */,
-				75CB6005289BDB9700ECB28A /* DongMH1Cell.swift */,
-				75E8762A289CBB5500DCFE0B /* MH1DetailVC.swift */,
 				75EAC39B28A24F0000D0298C /* AddContactMH1.swift */,
+				75E8762A289CBB5500DCFE0B /* MH1DetailVC.swift */,
+				75BAC9BB28AB435300E7EA55 /* SuaVC12.swift */,
+				75CB6005289BDB9700ECB28A /* DongMH1Cell.swift */,
 				75D6DEC3288659CA008E3970 /* Main.storyboard */,
 				75DD879428A0CBC800DEA020 /* ArrContact.swift */,
 				75D6DEC6288659CB008E3970 /* Assets.xcassets */,
@@ -291,6 +302,7 @@
 				75D6DEBE288659CA008E3970 /* AppDelegate.swift in Sources */,
 				75CD0D492897CF6B00246F4B /* ButtonMH2Detail.swift in Sources */,
 				75D9800D2898D96600968597 /* MH2ViewCell.swift in Sources */,
+				75BAC9BC28AB435300E7EA55 /* SuaVC12.swift in Sources */,
 				75DD879528A0CBC800DEA020 /* ArrContact.swift in Sources */,
 				75CB6004289BC91400ECB28A /* MyTableViewCell.swift in Sources */,
 				75CB6006289BDB9700ECB28A /* DongMH1Cell.swift in Sources */,
